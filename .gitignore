@@ -1,0 +1,21 @@
+# 依赖与产物
+node_modules/
+npm-debug.log*
+
+# 数据（SQLite 文件不入库）
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# 环境变量与密钥
+.env
+.env.local
+*.pem
+*.key
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的作品集 · 留言板</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1 id="site-name">我的作品集</h1>
+  <p class="sub">一些认真做过的东西，和一块可以留言的地方。</p>
+</header>
+
+<main>
+  <section class="works-section">
+    <h2>作品</h2>
+    <div class="works" id="works" aria-live="polite">
+      <p class="loading">加载中……</p>
+    </div>
+  </section>
+
+  <section class="board-section">
+    <div class="board-head">
+      <h2>留言板</h2>
+      <span class="badge" id="count">0 条</span>
+    </div>
+
+    <form id="form" class="form" autocomplete="off">
+      <input id="name" type="text" maxlength="40" placeholder="你的称呼（可留空）">
+      <textarea id="content" maxlength="200" rows="3" placeholder="说点什么……（最多 200 字）" required></textarea>
+      <div class="form-foot">
+        <span class="counter"><span id="len">0</span>/200</span>
+        <button type="submit" id="submit">发布留言</button>
+      </div>
+      <p class="error" id="error" role="alert" hidden></p>
+    </form>
+
+    <ul class="messages" id="messages"></ul>
+    <p class="empty" id="empty" hidden>还没有留言，来做第一个。</p>
+  </section>
+</main>
+
+<footer>
+  <p>Express + SQLite · 容器化部署</p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
